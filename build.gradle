@@ -1,0 +1,25 @@
+plugins {
+    // Apply the java-library plugin to add support for Java Library
+    id 'java-library'
+}
+
+apply plugin: 'java'
+compileJava {
+    sourceCompatibility = '1.8'
+    targetCompatibility = '1.8'
+}
+
+repositories {
+    // Use jcenter for resolving your dependencies.
+    // You can declare any Maven/Ivy/file repository here.
+    jcenter()
+    mavenCentral()
+    
+}
+
+dependencies {
+	compile group: 'org.apache.ignite', name: 'ignite-core', version: '2.7.5'
+	compile group: 'org.apache.ignite', name: 'ignite-spring', version: '2.7.5'
+	compile group: 'org.apache.ignite', name: 'ignite-indexing', version: '2.7.5'
+	compile group: 'org.apache.ignite', name: 'ignite-spring-data', version: '2.7.5'
+}
